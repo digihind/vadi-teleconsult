@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DocsApp</title>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
     <script src="app.js"></script>
 </head>
+
 <body ng-app="patient">
     <div ng-include src="'chatscreen.html'" id="search"></div>
     <div ng-controller="patientController">
         <input type="text" ng-model="search">
         <ul>
-            <li ng-repeat="doc in doctor | orderBy: '-name' | filter: search">{{doc.name}}-{{doc.spec}}</li>
+            <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
+                <!-- <img src=""> -->
+                <img ng-src="{{doc.thumb}}" width="100px" height="100px" style="border-radius: 50%;">
+                <span class="details">{{doc.name}}-{{doc.spec}}</span>
+            </li>
         </ul>
     </div>
 </body>
+
 </html>
