@@ -1,9 +1,8 @@
-
 .book .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap:2rem;
+    gap:2rem; 
 }
  
 .book .row .image{

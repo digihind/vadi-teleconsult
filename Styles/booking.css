@@ -1,0 +1,48 @@
+.image{
+    width: 50%;
+    margin-left: 5%;
+    float: left;
+}
+.frm{
+    border: 2px solid rgb(22,160,133);
+    border-radius: 5px;
+    padding: 30px;
+    width: 30%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 150px;
+    /* display: grid; */
+}
+.box{
+    width: 100%;
+    margin: 5px auto;
+    border: 2px solid rgb(22,160,133);
+    border-radius: 3px;
+    padding: 5px;
+}
+.btn{
+    margin: 14px auto;
+    display: block;
+    border: 2px solid rgb(22,160,133);
+    border-radius: 3px;
+    padding: 3px;
+    color: rgb(22,160,133);
+    background-color: white;
+}
+h3{
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(68,68,68);
+}
+h1{
+    text-align: center;
+    /* font-family: Poppins; */
+    font-size:xxx-large;
+    color: rgb(68,68,68);
+    text-shadow: 3px 3px rgb(204,204,204);
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+h1 span{
+    color:rgb(22,160,133);
+}
