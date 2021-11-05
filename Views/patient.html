@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocsApp</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/Styles/patient.css">
+</head>
+
+<body ng-app="patient">
+    <div ng-include src="'chatscreen.html'" id="search"></div>
+    <div ng-controller="patientController">
+        <input type="text" ng-model="search">
+        <ul>
+            <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
+                <img ng-src="{{doc.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
+
+                <div class="details">
+                    <div class="nm">{{doc.name}}</div>
+                    <div class="degree"></div>
+                    <div class="spec">{{doc.spec}}</div>
+                </div>
+                <div class="btns">
+                    <button id="book"><a href="booking.html">Book an appointment</a></button>
+                    <button id="chat">Chat</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

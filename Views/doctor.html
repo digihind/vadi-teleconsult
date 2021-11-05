@@ -11,25 +11,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="patient.css">
+    <script src="/app1.js"></script>
+    <link rel="stylesheet" href="/Styles/doctor.css">
 </head>
 
-<body ng-app="patient">
+<body ng-app="doctor">
     <div ng-include src="'chatscreen.html'" id="search"></div>
-    <div ng-controller="patientController">
-        <input type="text" ng-model="search">
+    <div ng-controller="doctorController">
+        <input type="date" ng-model="search">
         <ul>
-            <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
-                <img ng-src="{{doc.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
+            <li ng-repeat="p in patient | orderBy: 'name' | filter: search">
+                <img ng-src="{{p.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
 
                 <div class="details">
-                    <div class="nm">{{doc.name}}</div>
-                    <div class="degree"></div>
-                    <div class="spec">{{doc.spec}}</div>
+                    <div class="nm">{{p.name}}</div>
+                    <div class="age">{{p.age}}</div>
+                    <div class="phone_no">{{p.phone_no}}</div>
+                    <div class="issue">{{p.issue}}</div>
                 </div>
                 <div class="btns">
-                    <button id="book">Book an appointment</button>
+                    <button id="Accept">Accept</button>
+                    <button id="Deny">Deny</button>
                     <button id="chat">Chat</button>
                 </div>
             </li>
