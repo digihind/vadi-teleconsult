@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
     <script src="app.js"></script>
+    <link rel="stylesheet" href="patient.css">
 </head>
 
 <body ng-app="patient">
@@ -20,9 +21,17 @@
         <input type="text" ng-model="search">
         <ul>
             <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
-                <!-- <img src=""> -->
-                <img ng-src="{{doc.thumb}}" width="100px" height="100px" style="border-radius: 50%;">
-                <span class="details">{{doc.name}}-{{doc.spec}}</span>
+                <img ng-src="{{doc.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
+
+                <div class="details">
+                    <div class="nm">{{doc.name}}</div>
+                    <div class="degree"></div>
+                    <div class="spec">{{doc.spec}}</div>
+                </div>
+                <div class="btns">
+                    <button id="book">Book an appointment</button>
+                    <button id="chat">Chat</button>
+                </div>
             </li>
         </ul>
     </div>

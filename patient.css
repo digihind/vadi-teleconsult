@@ -1,0 +1,38 @@
+li{
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #eeedef;
+    margin: 5px auto;
+    padding: 7px;
+    list-style-type: none;
+    position: relative;
+}
+#chat{
+    background-color: #1c915a;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+#book{
+    background-color: #2b70cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.details{
+    position: absolute;
+    left: 180px;
+    top: 10px;
+}
+.btns{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+.nm{
+    font-size: large;
+    font-weight: 600;
+}
