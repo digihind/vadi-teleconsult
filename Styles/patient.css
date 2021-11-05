@@ -1,5 +1,5 @@
 li{
-    width: 70%;
+    width: 60%;
     border: 1px solid grey;
     border-radius: 5px;
     background-color: #eeedef;
@@ -7,20 +7,6 @@ li{
     padding: 7px;
     list-style-type: none;
     position: relative;
-}
-#chat{
-    background-color: #1c915a;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-#book{
-    background-color: #2b70cf;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
 }
 .details{
     position: absolute;
@@ -30,7 +16,24 @@ li{
 .btns{
     position: absolute;
     bottom: 10px;
-    right: 15px;
+    right: 10px;
+    
+}
+#chat{
+    background-color: #1c915a;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+}
+#book{
+    background-color: #2b70cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
 }
 .nm{
     font-size: large;

@@ -7,21 +7,27 @@ patient.config(function ($routeProvider) {
 patient.controller('patientController', function ($scope) {
     $scope.doctor = [{
         name: "Dr. Aman Jain",
-        spec: "heart",
+        spec: "Cardiologist",
         fee: 200,
-        thumb: "Pictures/abcd.jpg",
+        thumb: "/Pictures/abcd.jpg",
     },
     {
         name: "Dr. Shruti Jha",
-        spec: "brain",
+        spec: "Opthalmologist",
         fee: 200,
-        thumb: "Pictures/pqrs.jpeg",
+        thumb: "/Pictures/pqrs.jpeg",
     },
     {
         name: "Dr. Kamal Chhajer",
-        spec: "teeth",
+        spec: "Child Specialist",
         fee: 200,
-        thumb: "Pictures/xyz.jpg",
-    }
+        thumb: "/Pictures/xyz.jpg",
+    },
+    {
+        name: "Dr. Shivram Goenka",
+        spec: "Neuro-Surgeon",
+        fee: 200,
+        thumb: "/Pictures/abcd.jpg",
+    },
     ]
 })
