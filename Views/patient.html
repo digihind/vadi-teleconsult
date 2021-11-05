@@ -19,6 +19,7 @@
     <div ng-include src="'chatscreen.html'" id="search"></div>
     <div ng-controller="patientController">
         <input type="text" ng-model="search">
+        <input type="color">
         <ul>
             <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
                 <img ng-src="{{doc.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
