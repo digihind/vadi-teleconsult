@@ -5,11 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DocsApp</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script src="/app1.js"></script>
+    <link rel="stylesheet" href="/Styles/doctor.css">
 </head>
 
-<body>
+<body ng-app="doctor">
+    <div ng-include src="'chatscreen.html'" id="search"></div>
+    <div ng-controller="doctorController">
+        <input type="date" ng-model="search">
+        <ul>
+            <li ng-repeat="p in patient | orderBy: 'name' | filter: search">
+                <img ng-src="{{p.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
 
+                <div class="details">
+                    <div class="nm">{{p.name}}</div>
+                    <div class="age">{{p.age}}</div>
+                    <div class="phone_no">{{p.phone_no}}</div>
+                    <div class="issue">{{p.issue}}</div>
+                </div>
+                <div class="btns">
+                    <button id="Accept">Accept</button>
+                    <button id="Deny">Deny</button>
+                    <button id="chat">Chat</button>
+                </div>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>

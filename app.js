@@ -42,4 +42,8 @@ patient.controller('patientController', function ($scope) {
 //     }, function (error) {
 //         console.log('Error');
 //     });
+<<<<<<< HEAD
 // })
+=======
+// })
+>>>>>>> ed82c3901dd439293899b21ac890324202f74487
