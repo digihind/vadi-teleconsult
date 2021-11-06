@@ -44,16 +44,17 @@ $(document).ready(function () {
         cnt++;
         console.log('CLK');
         $(".frm").toggle();
-        console.log(cnt);
-        if (cnt % 2 !== 0) {
-            console.log("1st");
-            $("#details").attr("class", "blur");
-        }
-        else {
-            console.log('2nd');
-            $("#details").attr("class", "none");
-        }
+        console.log($("span").html());
+        $("#details").attr("class", "blur");
+
+
     });
+    $('.header-area span').click(function () {
+        console.log('clicked');
+        console.log($(".frm").html());
+        $(".frm").toggle();
+        $("#details").attr("class", "none");
+    })
 });
 
 // patient.controller('patientBController', function ($scope, $http) {
