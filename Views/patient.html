@@ -7,30 +7,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DocsApp</title>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
     <script src="/app.js"></script>
     <link rel="stylesheet" href="/Styles/patient.css">
-</head>
 
-<body ng-app="patient">
-    <div ng-include src="'chatscreen.html'" id="search"></div>
-    <div ng-controller="patientController">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Styles/chatscreen.css">
+</head>
+<!-- style="display: none;" -->
+
+<body ng-app="patient" class="main">
+    <div class="frm" style="display: none;">
+        <iframe src="chatscreen.html" frameborder="0" width="100%" height="100%" scrolling="no" name="chatfrm"
+            id="chatfrm"></iframe>
+    </div>
+
+    <!-- <div class="content">
+        <div class="header-area">
+            <h1> Global Chat </h1>
+        </div>
+
+        <div class="message-area" id="message-area">
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+
+            <div class="message-box my-message-box">
+                <div class="message my-message"> I am good, how are you doing? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you?snjdxebhde
+                    edhde</div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box my-message-box">
+                <div class="message my-message"> I am good, how are you doing? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you?snjdxebhde
+                    edhde</div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box my-message-box">
+                <div class="message my-message"> I am good, how are you doing? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you?snjdxebhde
+                    edhde</div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box my-message-box">
+                <div class="message my-message"> I am good, how are you doing? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you? </div>
+                <div class="separator"></div>
+            </div>
+            <div class="message-box others-message-box">
+                <div class="message others-message"> Hi, How are you?snjdxebhde
+                    edhde</div>
+                <div class="separator"></div>
+            </div>
+        </div>
+
+        <div class="typing-area">
+            <textarea class="typing-box" id="typing-box" rows="1" placeholder="Message"></textarea>
+            <i class="fa fa-send-o send-button" onclick="sendMessage()" style="font-size:24px"></i>
+        </div>
+    </div>
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("typing-box").value;
+            var html = '<div class="message-box my-message-box">' +
+                '<div class="message my-message"> ' + message + ' </div>' +
+                '<div class="separator"></div>' +
+                '</div>';
+
+            document.getElementById("message-area").innerHTML += html;
+            document.getElementById("typing-box").value = "";
+        }
+    </script> -->
+    <!-- <div ng-include src="'chatscreen.html'" id="search"></div> -->
+    <div ng-controller="patientController" id="details">
         <input type="text" ng-model="search">
         <ul>
             <li ng-repeat="doc in doctor | orderBy: 'name' | filter: search">
                 <img ng-src="{{doc.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
 
-                <div class="details">
+                <div class="info">
                     <div class="nm">{{doc.name}}</div>
                     <div class="degree"></div>
                     <div class="spec">{{doc.spec}}</div>
                 </div>
                 <div class="btns">
-                    <button id="book"><a href="booking.html">Book an appointment</a></button>
-                    <button id="chat">Chat</button>
+                    <button class="book"><a href="booking.html">Book an appointment</a></button>
+                    <button class="chat"><a href="chatscreen.html" target="chatfrm">Chat</a></button>
                 </div>
             </li>
         </ul>
