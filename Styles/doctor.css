@@ -1,3 +1,6 @@
+.main{
+    position: relative;
+}
 li{
     width: 60%;
     border: 1px solid grey;
@@ -8,7 +11,7 @@ li{
     list-style-type: none;
     position: relative;
 }
-.details{
+.info{
     position: absolute;
     left: 180px;
     top: 10px;
@@ -19,16 +22,18 @@ li{
     right: 10px;
     
 }
-#chat{
-    background-color: blue;
+.chat{
+    font-size: 14px;
+    background-color: #1c915a;
     color: white;
     border: none;
     padding: 5px;
     border-radius: 5px;
     margin: 2px;
 }
-#Accept{
-    background-color:green;
+.accept{
+    font-size: 14px;
+    background-color:blue;
     color: white;
     border: none;
     border-radius: 5px;
@@ -36,7 +41,8 @@ li{
     margin: 2px;
 }
 
-#Deny{
+.deny{
+    font-size: 14px;
     background-color:red;
     color: rgb(255, 255, 255);
     border: none;
@@ -47,4 +53,33 @@ li{
 .nm{
     font-size: large;
     font-weight: 600;
+}
+a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+a:active{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.frm{
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    z-index: 999;
+}
+.blur   {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
 }
