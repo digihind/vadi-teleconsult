@@ -1,9 +1,5 @@
 var patient = angular.module('patient', ['ngRoute']);
 
-patient.config(function ($routeProvider) {
-
-});
-
 patient.controller('patientController', function ($scope) {
     $scope.doctor = [
         {
