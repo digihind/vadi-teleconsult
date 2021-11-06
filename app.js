@@ -1,9 +1,5 @@
 var patient = angular.module('patient', ['ngRoute']);
 
-patient.config(function ($routeProvider) {
-
-});
-
 patient.controller('patientController', function ($scope) {
     $scope.doctor = [
         {
@@ -29,9 +25,34 @@ patient.controller('patientController', function ($scope) {
             "spec": "Neuro-Surgeon",
             "fee": 200,
             "thumb": "/Pictures/abcd.jpg"
-        }
+        },
+        {
+            "name": "Dr. Kamal Chhajer",
+            "spec": "Child Specialist",
+            "fee": 200,
+            "thumb": "/Pictures/xyz.jpg"
+        },
     ]
 })
+$(document).ready(function () {
+    var cnt = 0;
+    $(".chat").click(function () {
+        cnt++;
+        console.log('CLK');
+        $(".frm").toggle();
+        console.log($("span").html());
+        $("#details").attr("class", "blur");
+
+
+    });
+    $('.header-area span').click(function () {
+        console.log('clicked');
+        console.log($(".frm").html());
+        $(".frm").toggle();
+        $("#details").attr("class", "none");
+    })
+});
+
 // patient.controller('patientBController', function ($scope, $http) {
 //     $http({
 //         method: 'GET',
