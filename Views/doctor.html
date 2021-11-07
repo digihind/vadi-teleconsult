@@ -12,20 +12,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
     <script src="/app1.js"></script>
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <link rel="stylesheet" href="/Styles/doctor.css">
     <link rel="stylesheet" href="/Styles/chatscreen.css">
 </head>
 
 <body ng-app="doctor" ng-controller="doctorController" class="main">
     <header>
-        <img src="\Pictures\logo.PNG" height="40px" width="250px">
+        <img src="\Pictures\logo.PNG" height="40px" width="220px">
         <div class="input-field">
-            <input type="text" ng-model="search">
+            <input type="text" ng-model="search" placeholder="&#128269; | Search">
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jump to
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                    <li><a class="dropdown-item" href="#">Review</a></li>
+                    <li><a class="dropdown-item" href="#">Blogs</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -46,82 +66,12 @@
                     <div class="issue">{{p.issue}}</div>
                 </div>
                 <div class="buttons">
-                    <button class="accept">Accept</button>
-                    <button class="deny">Deny</button>
-                    <button class="chat"><a href="chatscreen_doc.html" target="chatfrm">Chat</a></button>
+                    <button class="accept"><i class="fa fa-check" aria-hidden="true"></i>Accept</button>
+                    <button class="deny"><i class="fa fa-ban" aria-hidden="true"></i>Deny</button>
+                    <button class="chat"><a href="chatscreen_doc.html" target="chatfrm"><i class="fa fa-comments-o"
+                                aria-hidden="true"></i>Chat</a></button>
                 </div>
             </li>
         </ul>
     </div>
 </body>
-
-</html>
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Styles/doctor.css">
-    <link rel="stylesheet" href="/Styles/chatscreen.css"> -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-
-    <div class="container">
-        <h2>Dropdowns</h2>
-        <p>The .dropdown class is used to indicate a dropdown menu.</p>
-        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
-        <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and
-            data-toggle="dropdown".</p>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
-        </div>
-    </div>
-
-</body>
-
-</html> -->
-<!-- <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-            </ul>
-        </div> -->
-<!--<div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
-            </a>
-
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Home</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Review</a></li>
-                <li><a class="dropdown-item" href="#">Blogs</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-        </div> -->
-<!-- <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#search">Search</a>
-    <a href="#about">About Us</a>
-    <a href="#doctors">Doctors</a>
-    <a href="#book">Book</a>
-    <a href="#review">Review</a>
-    <a href="#blogs">Blogs</a>
-    </nav> -->

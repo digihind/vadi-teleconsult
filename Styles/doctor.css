@@ -1,13 +1,26 @@
 .main{
     position: relative;
+    background: url(/Pictures/Bg.jpg) no-repeat center center fixed #000; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.dropdown{
+    position: absolute;
+    display: inline;
+
 }
 #details li{
     width: 60%;
     border: 1px solid grey;
     border-radius: 5px;
-    background-color: #eeedef27;
+    background-color: #eeedef;
     margin: 13px auto;
     padding: 7px;
+    z-index: 4;
     list-style-type: none;
     position: relative;
     transition: transform 0.5s;
@@ -26,34 +39,51 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
+    /* padding: 10px; */
 }
 .chat{
     font-size: 14px;
     background-color: #1c915a;
     color: white;
     border: none;
-    padding: 5px;
+    padding: 6px;
     border-radius: 5px;
     margin: 2px;
+}
+.chat i{
+    background-color: white;
+    margin-right: 5px;
+    color: #1c915a;
+    padding: 1px;
 }
 .accept{
     font-size: 14px;
-    background-color:blue;
+    background-color:#286090;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
     margin: 2px;
 }
-
+.accept i{
+    background-color: white;
+    margin-right:5px;
+    color: #286090;
+}
 .deny{
     font-size: 14px;
-    background-color:red;
+    background-color:#CC0910;
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 6px;
     margin: 2px;
+}
+.deny i{
+    background-color: white;
+    margin-right: 5px;
+    color:#CC0910;
+    padding: 1px;
 }
 .nm{
     font-size: large;
@@ -102,113 +132,53 @@
     -ms-filter: blur(5px);
 }
 header{
-    overflow: hidden;
     height: 80px;
     width: 100%;
     position: fixed;
     color: black;
     background-color: #ffffff;
-    /* background-color: #1c915a; */
-    /* background-color: #eeedef27; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    /* padding: 20px; */
     display: inline;
     z-index: 10000;
 }
+hr{
+    margin: 5px;
+}
+
 header img{
     margin: 20px 20px;
-    /* z-index: 999; */
 }
 .input-field{
-    width: 1000%;
-    height: 50px;
     position: absolute;
     display: inline;
-    /* background-color: #f0f0f0; */
     top: 20px;
     border-radius: 55px; 
-    /* display: grid; */
+    padding-left: 40px;
 }
 .input-field input{
-    width: 500px;
+    width: 915px;
     border-radius: 20px;
     background: none;
-    /* outline: none; */
     background-color: #f0f0f0;
     padding: 0 10px;
-    /* border: none;  */
-    /* line-height: 1; */
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 19px;
     color: #333;
     height: 40px;
+}
+.dropdown{
+    z-index: 10101010;
+    display: inline;
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    margin-right: 40px;
 }
 #details{
     position: absolute;
     width: 100%;
     top: 80px;
-    /* margin-top: 80px; */
 }
-/* .btn{
-    position: static;
-} */
-/* header{ */
-    /* padding:2rem 9%; */
-    /* width: 100%; */
-    /* height: 60px;
-    padding: 30px 0 20px 170px;
-    margin: 0;
-    position: sticky;
-    top:0; left: 0; right: 0;
-    z-index: 1000;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-}
-
-header .navbar a{
-    font-size: 1.7rem;
-    color: black;
-    margin-left: 2rem;
-}
-.navbar{
-    margin: left 10px;
-}
-
-header .navbar a:hover{
-    color: rgb(105, 105, 189);
-}
-header .logo{
-    font-size: 2.5rem;
-    color: var(--black);
-}
-
-header .logo i{
-    color: var(--green);
-}
-
-.input-field input{
-    background: none;
-    outline: none;
-    border: none; 
-    line-height: 1;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: #333;
-    
-}
-
-.input-field{
-    max-width: 380px;
-    width: 100%;
-    height: 55px;
-    background-color: #f0f0f0;
-    margin: 40px 0;
-    border-radius: 55px;
-    display: grid;
-    /* grid-template-columns: 15% 85% ; */
-    /* padding-left: 200px; */
-    /* position: relative; */
-/* }  */
