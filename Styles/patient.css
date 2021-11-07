@@ -5,11 +5,18 @@ li{
     width: 60%;
     border: 1px solid grey;
     border-radius: 5px;
-    background-color: #eeedef;
-    margin: 5px auto;
+
+    background-color: #eeedef27;
+    margin: 13px auto;
     padding: 7px;
     list-style-type: none;
     position: relative;
+    transition: transform 0.5s;
+    box-shadow: 0px 0px 8px black;
+}
+li:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 12px black;
 }
 .info{
     position: absolute;
@@ -30,6 +37,7 @@ li{
     padding: 5px;
     border-radius: 5px;
     margin: 2px;
+    
 }
 .book{
     background-color: #2b70cf;
@@ -64,21 +72,23 @@ a:visited{
     position: fixed;
     right: 0px;
     z-index: 999;
+    animation: creep-in 800ms cubic-bezier(.23,.9,.56,1.38);
+}
+@keyframes creep-in {
+    0%{
+        transform: translate(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }    
 }
 .blur   {
+    transition: all 900ms;
     filter: blur(5px);
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
 }
-/* #overlay    {
-    position: fixed;
-    display: none;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: rgba(255,255,255,.8);
-    z-index: 999;
-} */
