@@ -3,18 +3,23 @@
 }
 li{
     width: 60%;
-    border: 1px solid grey;
-    border-radius: 5px;
+    border: 2px solid rgb(15, 5, 5);
+    border-radius: 7px;
     background-color: #eeedef;
-    margin: 5px auto;
+    margin-left:10px;
+    margin-bottom: 10px;
     padding: 7px;
     list-style-type: none;
     position: relative;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .info{
     position: absolute;
     left: 180px;
     top: 10px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .btns{
     position: absolute;
@@ -82,4 +87,74 @@ a:visited{
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
+}
+
+.header{
+    /* padding:2rem 9%; */
+    width: 100%;
+    height: 50px;
+    padding-left:170px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    margin: 0;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: black;
+    margin-left: 2rem;
+}
+.navbar{
+    margin: left 10px;
+}
+
+.header .navbar a:hover{
+    color: rgb(105, 105, 189);
+}
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.header .logo i{
+    color: var(--green);
+}
+#details{
+    background-color: #a2e6c6;
+    /* width: 1000px; */
+    /* height: 1000px; */
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.input-field input{
+    background: none;
+    outline: none;
+    border: none; 
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #333;
+    
+}
+
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: #f0f0f0;
+    margin: 40px 0;
+    border-radius: 55px;
+    display: grid;
+    /* grid-template-columns: 15% 85% ; */
+    /* padding-left: 200px; */
+    /* position: relative; */
 }
