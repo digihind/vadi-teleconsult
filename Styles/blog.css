@@ -1,13 +1,8 @@
 
 .blogs .box-container{
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:20px; */
     display: flex;
     align-items: row;
     justify-content: space-evenly;
-    /* padding-left:50px;
-    padding-top: 20px; */
 }
 
 .blogs .box-container .box{
@@ -37,7 +32,6 @@
 }
 
 .blogs .box-container .box .content{
-    /* padding-top: 1rem; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -50,7 +44,6 @@
 
 .blogs .box-container .box .content .icon a{
     font-size: 25px;
-    /* color: var(--light-color); */
     text-decoration: none;
     color:rgb(41, 1, 41);
 }
@@ -65,7 +58,6 @@
 }
 
 .blogs .box-container .box .content h3{
-    /* color:var(--black); */
     font-size: 30px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -74,7 +66,6 @@
     color:var(--light-color);
     font-size: 20px;
     line-height: 1.5;
-    /* padding:1rem 0; */
 }
 .heading{
     text-align: center;
