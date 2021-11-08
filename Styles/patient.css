@@ -1,5 +1,15 @@
 .main{
     position: relative;
+    background: url(/Pictures/Bg.jpg) no-repeat center center fixed #000; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.dropdown{
+    position: absolute;
+    display: inline;
+
 }
 #details li{
     width: 60%;
@@ -35,16 +45,27 @@
     border: none;
     padding: 5px;
     border-radius: 5px;
-    margin: 2px;
-    
+    margin: 2px; 
+}
+.chat i{
+    background-color: white;
+    margin-right: 5px;
+    color: #1c915a;
+    padding: 1px;
 }
 .book{
-    background-color: #2b70cf;
+    background-color: #286090;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 5px;
     margin: 2px;
+}
+.book i{
+background-color: white;
+    margin-right: 5px;
+    color: #286090;
+    padding: 1px;
 }
 .nm{
     font-size: large;
@@ -98,35 +119,45 @@ header{
     position: fixed;
     color: black;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    /* padding: 20px; */
     display: inline;
-    z-index: 9999;
+    z-index: 10000;
 }
+hr{
+    margin: 5px;
+}
+
 header img{
     margin: 20px 20px;
 }
 .input-field{
-    width: 1000%;
-    height: 50px;
     position: absolute;
     display: inline;
-    /* background-color: #f0f0f0; */
     top: 20px;
     border-radius: 55px; 
-    /* display: grid; */
+    padding-left: 40px;
 }
 .input-field input{
-    width: 500px;
+    width: 915px;
     border-radius: 20px;
     background: none;
-    /* outline: none; */
     background-color: #f0f0f0;
     padding: 0 10px;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 19px;
     color: #333;
     height: 40px;
+}
+.dropdown{
+    z-index: 10101010;
+    display: inline;
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    margin-right: 40px;
 }
 #details{
     position: absolute;

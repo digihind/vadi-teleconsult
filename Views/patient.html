@@ -10,7 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/app.js"></script>
     <link rel="stylesheet" href="/Styles/patient.css">
 
@@ -20,10 +22,23 @@
 
 <body ng-app="patient" class="main" ng-controller="patientController">
     <header>
-
-        <img src="\Pictures\logo.PNG" height="40px" width="250px">
+        <img src="\Pictures\logo.PNG" height="40px" width="220px">
         <div class="input-field">
-            <input type="text" ng-model="search">
+            <input type="text" ng-model="search" placeholder="&#128269; | Search">
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jump to
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                    <li><a class="dropdown-item" href="#">Review</a></li>
+                    <li><a class="dropdown-item" href="#">Blogs</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -43,8 +58,10 @@
                     <div class="spec">{{doc.spec}}</div>
                 </div>
                 <div class="btns">
-                    <button class="book"><a href="booking.html">Book an appointment</a></button>
-                    <button class="chat"><a href="chatscreen_pat.html" target="chatfrm">Chat</a></button>
+                    <button class="book"><a href="booking.html"><i class="fa fa-calendar" aria-hidden="true"></i>Book an
+                            appointment</a></button>
+                    <button class="chat"><a href="chatscreen_pat.html" target="chatfrm"><i class="fa fa-comments-o"
+                                aria-hidden="true"></i>Chat</a></button>
                 </div>
             </li>
         </ul>
