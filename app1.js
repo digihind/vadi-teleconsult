@@ -7,25 +7,29 @@ doctor.controller('doctorController', function ($scope) {
             "name": "Harshit Arora",
             "age": 24,
             "phone_no": 9780123234,
-            "issue": "Teeth Pain"
+            "issue": "Teeth Pain",
+            "thumb": "/Pictures/pat3.jpeg"
         },
         {
             "name": "Ishita Dutta",
             "age": 34,
             "phone_no": 9780343234,
-            "issue": "Severe back pain"
+            "issue": "Severe back pain",
+            "thumb": "/Pictures/pat7.jpeg"
         },
         {
-            "name": "Aafiya Ahmed",
+            "name": "Aatif Aslam",
             "age": 37,
             "phone_no": 7980123234,
-            "issue": "Stomach ache"
+            "issue": "Stomach ache",
+            "thumb": "/Pictures/pat1.jpeg"
         },
         {
             "name": "Shipra Sharma",
             "age": 22,
             "phone_no": 9780123278,
-            "issue": "Headache cough and cold"
+            "issue": "Headache cough and cold",
+            "thumb": "/Pictures/pat2.jpeg"
         }
     ]
 })
