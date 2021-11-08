@@ -3,33 +3,38 @@ var patient = angular.module('patient', ['ngRoute']);
 patient.controller('patientController', function ($scope) {
     $scope.doctor = [
         {
-            "name": "Dr. Aman Jain",
-            "spec": "Cardiologist",
-            "fee": 200,
+            "name": "NAME: Dr. Aman Jain",
+            "spec": "SPECIALISATION: Interventional Cardiologist & Diabetologist",
+            "fee": "FEES: 200",
+            "degree": "MD(Medicine), DNB(Cardiology)",
             "thumb": "/Pictures/abcd.jpg"
         },
         {
-            "name": "Dr. Shruti Jha",
-            "spec": "Opthalmologist",
-            "fee": 200,
+            "name": "NAME: Dr. Shruti Jha",
+            "spec": "SPECIALISATION: Opthalmologist",
+            "fee": "FEES: 200",
+            "degree": "MD(Medicine) MS(Master of Surgery)",
             "thumb": "/Pictures/pqrs.jpeg"
         },
         {
-            "name": "Dr. Kamal Chhajer",
-            "spec": "Child Specialist",
-            "fee": 200,
+            "name": "NAME: Dr. Kamal Chhajer",
+            "spec": "SPECIALISATION: Child Specialist",
+            "fee": "FEES: 200",
+            "degree": "MCh(Master of Chirurgiae), MD(Medicine)",
             "thumb": "/Pictures/xyz.jpg"
         },
         {
-            "name": "Dr. Shivram Goenka",
-            "spec": "Neuro-Surgeon",
-            "fee": 200,
+            "name": "NAME: Dr. Shivram Goenka",
+            "spec": "SPECIALISATION: Dentist",
+            "degree": "MD(Medicine), BDS(Bachelor of Dental Surgeries)",
+            "fee": "FEES: 200",
             "thumb": "/Pictures/abcd.jpg"
         },
         {
-            "name": "Dr. Kamal Chhajer",
-            "spec": "Child Specialist",
-            "fee": 200,
+            "name": "NAME: Dr. Seema Jha",
+            "spec": "SPECIALISATION: Child Specialist",
+            "degree": "MD(Medicine), MS(ENT)",
+            "fee": "FEES: 200",
             "thumb": "/Pictures/xyz.jpg"
         },
     ]
