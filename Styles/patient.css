@@ -15,9 +15,10 @@
     width: 60%;
     border: 1px solid grey;
     border-radius: 5px;
-    background-color: #eeedef27;
+    background-color: #eeedef;
     margin: 13px auto;
     padding: 7px;
+    z-index: 400;
     list-style-type: none;
     position: relative;
     transition: transform 0.5s;
