@@ -17,25 +17,25 @@ patient.controller('patientController', function ($scope) {
             "thumb": "/Pictures/pqrs.jpeg"
         },
         {
-            "name": "NAME: Dr. Kamal Chhajer",
+            "name": "NAME: Dr. Kamala Chhajer",
             "spec": "SPECIALISATION: Child Specialist",
             "fee": "FEES: 200",
             "degree": "MCh(Master of Chirurgiae), MD(Medicine)",
-            "thumb": "/Pictures/xyz.jpg"
+            "thumb": "/Pictures/DOC1.jpeg"
         },
         {
             "name": "NAME: Dr. Shivram Goenka",
             "spec": "SPECIALISATION: Dentist",
             "degree": "MD(Medicine), BDS(Bachelor of Dental Surgeries)",
             "fee": "FEES: 200",
-            "thumb": "/Pictures/abcd.jpg"
+            "thumb": "/Pictures/xyz.jpg"
         },
         {
             "name": "NAME: Dr. Seema Jha",
             "spec": "SPECIALISATION: Child Specialist",
             "degree": "MD(Medicine), MS(ENT)",
             "fee": "FEES: 200",
-            "thumb": "/Pictures/xyz.jpg"
+            "thumb": "/Pictures/DOC3.jpeg"
         },
     ]
 })

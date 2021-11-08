@@ -8,7 +8,7 @@ doctor.controller('doctorController', function ($scope) {
             "age": "AGE:24",
             "phone_no": "MOBILE NO: 9780123234",
             "issue": "ISSUES: Teeth Pain",
-            "thumb": "\Pictures\PAT6.jpeg"
+            "thumb": "\Pictures\PAT1.jpeg"
         },
         {
             "name": "NAME: Ishita Dutta",

@@ -25,7 +25,7 @@ input{
     width: 2000px;
     top: -10%;
     right: 48%;
-    background-image: linear-gradient(-45deg, #083d36 0%, #00bfa6 100%);
+    background-image: linear-gradient(-45deg, rgb(2, 17, 87) 0%, #4d6cc2 100%);
     transform: translateY(-50%);
     border-radius: 50% ;
     z-index: 6;
@@ -95,7 +95,7 @@ form{
     outline:  none;
     border: none;
     border-radius: 48px;
-    background-color: rgb(4, 94, 94);
+    background-color: rgb(2, 17, 87);
     color: #f0f0f0;
     text-transform: uppercase;
     font-weight: 600;
@@ -115,14 +115,14 @@ form{
     z-index: 5;
 }
 
-form.sign-in-form{
+form .sign-in-form{
    z-index: 2;
 }
-form.sign-up-form{
-    padding-top: 200px;
-    padding-left: 0px;
-    padding-right: 600px;
-    margin-left: 0px;
+form .sign-up-form{
+    /* padding-top: 20px; */
+    /* padding-left: 0px; */
+    /* padding-right: 600px; */
+    /* margin-left: 0px; */
     z-index: 1;
     opacity: 0;
  }
@@ -149,6 +149,7 @@ form.sign-up-form{
     z-index: 7;
 }
 .left-panel{
+    margin: 0%;
     padding: 3rem 17% 2rem 12%;
 }
 .right-panel{
@@ -165,7 +166,7 @@ form.sign-up-form{
     font-size: 1.5rem;
 }
 .panel p{
-    font-size: 0.95rem;
+    font-size: 20px;
     padding: 0.7rem 0;
 }
 .btn.transparent{
@@ -225,13 +226,15 @@ form.sign-up-form{
 .box{
     width: 350px;
     height: 500px;
+    padding-top: 20px;
     background: white;
     position: relative;
     overflow: hidden;
-    border: 2px solid black;
+    border: 3px solid black;
+    border-radius: 5px;
     /* background-color: aqua; */
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 5px;
+    margin-left: 0px;
 }
 .Patient{
     position: absolute;
@@ -259,20 +262,21 @@ form.sign-up-form{
     color: white;
 }
 .input-group .inp{
-    width: 100%;
+    width: 220px;
     padding: 10px 15px;
     border-radius: 100px;
-    border: 1px solid yellow;
+    border: 2px solid rgb(2, 17, 87);
     margin-top:  5px;
 
 }
 .submit-inp{
-    background: linear-gradient(30deg, teal,yellow);
+    background: linear-gradient(30deg, rgb(2, 17, 87),rgb(41, 110, 236));
     border: none !important;
     color: white;
     font-weight: bolder;
     font-variant: small-caps;
     font-size: 18px;
+    width: 120px;
 }
 .toggle-btn{
     -webkit-appearance: none;
@@ -283,6 +287,7 @@ form.sign-up-form{
     top: 30;
     Left: calc(50% - 75px);
     border-radius: 100px;
+    border: 2px solid rgb(2, 17, 87);
 }
 .toggle-btn:before{
     content: 'Patient';
@@ -294,7 +299,7 @@ form.sign-up-form{
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(30deg, teal,yellow);
+    background: linear-gradient(30deg, rgb(2, 17, 87),rgb(41, 110, 236));
     border-radius: 100px;
     place-items: center;
     transition: 0.5s;
