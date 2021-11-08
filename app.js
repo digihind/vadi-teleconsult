@@ -53,14 +53,14 @@ $(document).ready(function () {
     })
 });
 
-// patient.controller('patientBController', function ($scope, $http) {
-//     $http({
-//         method: 'GET',
-//         url: '/Data/Doctors.json'
-//     }).then(function (data) {
-//         console.log(data);
-//         $scope.doctor = data;
-//     }, function (error) {
-//         console.log('Error');
-//     });
-// })
+patient.controller('patientBController', function ($scope, $http) {
+    $http({
+        method: 'GET',
+        url: '/Data/Doctors.json'
+    }).then(function (data) {
+        console.log(data);
+        $scope.doctor = data;
+    }, function (error) {
+        console.log('Error');
+    });
+})
