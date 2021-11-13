@@ -302,7 +302,7 @@ signin-signup .box{
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(30deg, teal,yellow);
+    background: linear-gradient(30deg, rgb(5, 40, 114),rgb(90, 108, 209));
     border-radius: 100px;
     place-items: center;
     transition: 0.5s;
@@ -371,11 +371,11 @@ i{
     /* padding-bottom: 20px; */
     font-size: 70px;
     /* margin: 0px; */
-    margin-top: 100px;
-    margin-bottom: 30px;
-    color: rgb(47, 77, 99);
+    margin-top: 80px;
+    margin-bottom: 10px;
+    color: rgb(2, 25, 68);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 5px 5px #16a085;
+    text-shadow: 5px 5px #505196;
 
 }
 
@@ -386,8 +386,8 @@ i{
 }
 
 .blogs .box-container .box{
-    border: 5px solid #073b31;
-    box-shadow: 0 0 15px #16a085;
+    border: 5px solid rgb(5, 5, 82);
+    box-shadow: 0 0 15px #4d6cc2;
     border-radius: 7px;
     padding: 20px;
     /* padding-bottom: 0px; */
@@ -396,7 +396,7 @@ i{
 }
 
 .blogs .box-container .box .image{
-    height: 260px;
+    height: 230px;
     width: 100%;
     overflow:hidden;
     border-radius: 5px;
@@ -414,6 +414,7 @@ i{
 
 .blogs .box-container .box .content{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* color: black; */
 }
 
 .blogs .box-container .box .content .icon{
@@ -446,25 +447,26 @@ i{
 .blogs .box-container .box .content p{
     color:var(--light-color);
     font-size: 20px;
+    color: black;
     /* margin-bottom: 20px; */
 }
 .heading{
     text-align: center;
     padding-top: 10px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 3px 3px #16a085;
+    text-shadow: 3px 3px #4d6cc2;
 }
 .blogs h3{
-    text-shadow: 1px 1px #073b31;
+    text-shadow: 1px 1px #4d6cc2;
 }
 .blogs .btn{
   text-align: center;
     margin: 20px auto;
     padding: 5px;
     display: block;
-    border: 4px solid #073b31;
+    border: 4px solid rgb(2, 17 , 87);
     border-radius: 30px;
-    color: #073b31;
+    color: rgb(70, 70, 170);
     background-color: white;
     font-size: 20px;
     height: 50px;
@@ -474,7 +476,7 @@ i{
 }
 .blogs .btn:hover{
     color: white;
-    background-color: #16a085;
+    background-color: #4d6cc2;
 }
 h3{
     padding: 0px;
@@ -483,10 +485,10 @@ h3{
 
 
 :root{
-    --green:#16a085;
+    --green:#052766;
     --black:#444;
     --light-color:#777;
-    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --box-shadow:.5rem .5rem 0 rgba(2, 17, 87, .2);
     --text-shadow:.4rem .4rem 0 rgba(0, 0, 0, .2);
     --border:.2rem solid var(--green);
 }
@@ -508,7 +510,7 @@ h3{
 
 .review .box-container .box{
     border:var(--border);
-    box-shadow: 0 0 10px #16a085;
+    box-shadow: 0 0 10px #4d6cc2;
     border-radius: .5rem;
     padding: 24px;
     margin-bottom: 30px;
@@ -522,7 +524,7 @@ h3{
 }
 .review .box-container .box:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 15px #16a085;
+    box-shadow: 0 0 15px #4d6cc2;
 }
 
 .review .box-container .box img{
@@ -550,6 +552,7 @@ h3{
     color:var(--light-color);
     font-size: 20px;
     padding-top: 60px;
+    color:black;
 }
 
 .review .box-container .box::before{
@@ -563,4 +566,11 @@ h3{
     height: 25rem;
     width: 120%;
     z-index: -1;
+}
+.heading1{
+    text-align: center;
+    color: rgb(2, 17 , 87);
+    font-size: 60px;
+    text-shadow: 3px 3px #505196;
+    padding: 32px;
 }
