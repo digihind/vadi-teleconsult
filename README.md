@@ -9,7 +9,7 @@ require quick attention and assistance.<br>
 DocsApp help people from different places to connect and contact with doctors 
 worldwide through video call and text facility. Patients suffering a particular issue 
 can describe the issue and can search out for the doctors nearby and get the 
-consultations and required medications.<br><br>
+consultations and required medication.<br><br>
 ## About the website
 Our website consists of two interfaces namely – Doctor and Patient. Upon opening 
 the website, the homepage appears. The homepage consists of Login/Signup 
