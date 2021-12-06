@@ -7,35 +7,35 @@ patient.controller('patientController', function ($scope) {
             "spec": "SPECIALISATION: Interventional Cardiologist & Diabetologist",
             "fee": "FEES: 200",
             "degree": "MD(Medicine), DNB(Cardiology)",
-            "thumb": "/abcd.jpg"
+            "thumb": "/pics/abcd.jpg"
         },
         {
             "name": "NAME: Dr. Shruti Jha",
             "spec": "SPECIALISATION: Opthalmologist",
             "fee": "FEES: 200",
             "degree": "MD(Medicine) MS(Master of Surgery)",
-            "thumb": "/pqrs.jpeg"
+            "thumb": "/pics/pqrs.jpeg"
         },
         {
             "name": "NAME: Dr. Kamala Chhajer",
             "spec": "SPECIALISATION: Child Specialist",
             "fee": "FEES: 200",
             "degree": "MCh(Master of Chirurgiae), MD(Medicine)",
-            "thumb": "/DOC1.jpeg"
+            "thumb": "/pics/Doc1.jpeg"
         },
         {
             "name": "NAME: Dr. Shivram Goenka",
             "spec": "SPECIALISATION: Dentist",
             "degree": "MD(Medicine), BDS(Bachelor of Dental Surgeries)",
             "fee": "FEES: 200",
-            "thumb": "/xyz.jpg"
+            "thumb": "/pics/xyz.jpg"
         },
         {
             "name": "NAME: Dr. Seema Jha",
             "spec": "SPECIALISATION: Child Specialist",
             "degree": "MD(Medicine), MS(ENT)",
             "fee": "FEES: 200",
-            "thumb": "/DOC3.jpeg"
+            "thumb": "/pics/doc3.jpeg"
         },
     ]
 })
