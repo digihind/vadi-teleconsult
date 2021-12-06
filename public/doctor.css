@@ -1,6 +1,6 @@
 .main{
     position: relative;
-    background: url(/Pictures/Bg.jpg) no-repeat center center fixed #000; 
+    background: url(/Bg.jpg) no-repeat center center fixed #000; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,7 +18,7 @@
     background-color: #eeedef;
     margin: 13px auto;
     padding: 7px;
-    z-index: 400;
+    z-index: 4;
     list-style-type: none;
     position: relative;
     transition: transform 0.5s;
@@ -103,7 +103,7 @@
 }
 .frm{
     width: 40%;
-    height: 100%;
+    height: 700px;
     position: fixed;
     top: 80px;
     right: 0px;
