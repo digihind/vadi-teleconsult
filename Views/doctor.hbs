@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocsApp</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <script src="/js/app1.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="/css/doctor.css">
+    <link rel="stylesheet" href="/css/chatscreen.css">
+</head>
+
+<body ng-app="doctor" ng-controller="doctorController" class="main">
+    <header>
+        <img src="/pics/logo.PNG" height="40px" width="220px">
+        <div class="input-field">
+            <input type="text" ng-model="search" placeholder="&#128269; | Search">
+        </div>
+        <div class="container">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Jump to
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                    <li><a class="dropdown-item" href="#">Review</a></li>
+                    <li><a class="dropdown-item" href="#">Blogs</a></li>
+                    <hr>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="frm" style="display: none;">
+        <iframe src="chatscreen_doc.html" frameborder="0" width="100%" height="95%" scrolling="no" name="chatfrm"
+            id="chatfrm"></iframe>
+    </div>
+
+    <div id="details">
+        <ul>
+            <li ng-repeat="p in patient | orderBy: 'name' | filter: search">
+                <img ng-src="{{p.thumb}}" width="150px" height="150px" style="border-radius: 50%;">
+
+                <div class="info">
+                    <div class="nm">{{p.name}}</div>
+                    <div class="age">{{p.age}}</div>
+                    <div class="phone_no">{{p.phone_no}}</div>
+                    <div class="issue">{{p.issue}}</div>
+                </div>
+                <div class="buttons">
+                    <button class="accept"><i class="fa fa-check" aria-hidden="true"></i>Accept</button>
+                    <button class="deny"><i class="fa fa-ban" aria-hidden="true"></i>Deny</button>
+                    <button class="chat"><a href="chatscreen_doc.html" target="chatfrm"><i class="fa fa-comments-o"
+                                aria-hidden="true"></i>Chat</a></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>

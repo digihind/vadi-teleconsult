@@ -5,7 +5,7 @@ const path = require('path');
 const router = express.Router();
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.port || 5000;
 
 
 app.use(express.static(__dirname + '/public'));
@@ -29,8 +29,13 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 app.get('/pat', (req, res) => {
-    console.log('Hello');
+    console.log('Patient Screen Loading!');
     res.render('patient');
+})
+
+app.get('/doc', (req, res) => {
+    console.log('Doctor Screen Loading!');
+    res.render('doctor');
 })
 
 app.listen(port, () => {
