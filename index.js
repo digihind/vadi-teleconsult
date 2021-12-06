@@ -38,6 +38,22 @@ app.get('/doc', (req, res) => {
     res.render('doctor');
 })
 
+app.get('/book', (req, res) => {
+    console.log('Doctor Screen Loading!');
+    res.render('booking');
+})
+
+app.get('/chatscreen_doc', (req, res) => {
+    console.log('Doctor Chat Screen Loading!');
+    res.render('chatscreen_doc');
+})
+
+app.get('/chatscreen_pat', (req, res) => {
+    console.log('Patient Chat Screen Loading!');
+    res.render('chatscreen_pat');
+})
+
+
 app.listen(port, () => {
     console.log(`Listening from port ${port}`);
 })

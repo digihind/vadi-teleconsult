@@ -6,14 +6,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    <link rel="stylesheet" href="/Styles/chatscreen.css">
+    <link rel="stylesheet" href="/css/chatscreen.css">
 </head>
 
 <body>
     <div class="content">
         <div class="header-area">
             <h1> Global Chat </h1>
-            <a href="/Views/patient.html" target="_parent">X</a>
+            <a href="/pat" target="_parent">X</a>
         </div>
 
         <div class="message-area" id="message-area">
@@ -93,6 +93,8 @@
             <i class="fa fa-send-o send-button" onclick="sendMessage()" style="font-size:24px"></i>
         </div>
     </div>
+
+
     <script>
         function sendMessage() {
             var message = document.getElementById("typing-box").value;
@@ -105,7 +107,7 @@
             document.getElementById("typing-box").value = "";
         }
     </script>
-    <!-- <script src="/app.js"></script> -->
+
 </body>
 
 </html>
