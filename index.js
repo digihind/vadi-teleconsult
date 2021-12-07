@@ -9,14 +9,14 @@ const hbs = require("hbs");
 // const mongoose = require('mongoose');
 // const doctor = require('./models/doctor');
 const Doctor = require("./models/doctor");
-const{ json } = require("express");
+const { json } = require("express");
 
 const port = process.env.port || 5000;
 
-const static_path = path.join(__dirname, "../public" );
+const static_path = path.join(__dirname, "../public");
 
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(static_path));
 app.set("view engine", "hbs");
@@ -32,25 +32,28 @@ async function main() {
     app.set('view engine', 'hbs');
 
     app.get('/', (req, res) => {
+        // const list = Doctor.find({});
+        // console.log(list);
         console.log('Hello');
-        res.render('home');
+        res.render('home',);
+    })
+    app.get('/pat', (req, res) => {
+        Doctor.find({}).then(data => {
+            console.log(data);
+            res.render("patient", { data });
+        });
     })
 
     app.get('/docl', async (req, res) => {
-        const list = await Doctor.find({});
-        console.log(list);
         res.send("Hi Sharda, Varun here!")
-        // res.render("doctor",{list});
     })
     app.get("/adduser", (req, res) => {
         console.log('Hello');
         res.render('add-user');
-        
+
     })
     app.post("/adduser", async (req, res) => {
-        try{
-            console.log(req.body.email);
-            res.send(req.body);
+        try {
             const registerDoc = new Doctor({
                 first_name: req.body.firstname,
                 last_name: req.body.lastname,
@@ -59,10 +62,11 @@ async function main() {
                 des: req.body.designation,
                 fees: req.body.fees
             })
-            const registered = await registerDoc.save();
-            res.status(201).render(home);
+
+            await registerDoc.save();
+            res.send("Hi");
         }
-        catch(error){
+        catch (error) {
             res.status(400).send(error);
         }
     })
