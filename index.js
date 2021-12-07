@@ -1,14 +1,26 @@
-const express = require("express");
+const express = require('express');
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
-const path = require('path');
-const router = express.Router();
-const mongoose = require('mongoose');
-const doctor = require('./models/doctor');
-const Doctor = require("./models/doctor");
-
+const path = require("path");
 const app = express();
+const hbs = require("hbs");
+
+// const router = express.Router();
+// const mongoose = require('mongoose');
+// const doctor = require('./models/doctor');
+const Doctor = require("./models/doctor");
+const{ json } = require("express");
+
 const port = process.env.port || 5000;
+
+const static_path = path.join(__dirname, "../public" );
+
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.use(express.static(static_path));
+app.set("view engine", "hbs");
+
 main().catch(err => console.log(err));
 async function main() {
 
@@ -30,7 +42,30 @@ async function main() {
         res.send("Hi Sharda, Varun here!")
         // res.render("doctor",{list});
     })
-
+    app.get("/adduser", (req, res) => {
+        console.log('Hello');
+        res.render('add-user');
+        
+    })
+    app.post("/adduser", async (req, res) => {
+        try{
+            console.log(req.body.email);
+            res.send(req.body);
+            const registerDoc = new Doctor({
+                first_name: req.body.firstname,
+                last_name: req.body.lastname,
+                email: req.body.email,
+                phone: req.body.phone,
+                des: req.body.designation,
+                fees: req.body.fees
+            })
+            const registered = await registerDoc.save();
+            res.status(201).render(home);
+        }
+        catch(error){
+            res.status(400).send(error);
+        }
+    })
     app.get('/pat', (req, res) => {
         console.log('Patient Screen Loading!');
         res.render('patient');
