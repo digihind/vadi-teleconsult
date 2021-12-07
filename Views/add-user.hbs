@@ -56,18 +56,32 @@
             <label for="floatingInput">Phone</label>
         </div>
     </div>
-    <div class="col-12">
+    <div class="col-6">
         <div class="form-floating mb-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="designation"
-                style="height: 200px">{{this.comments}}</textarea>
-            <label for="designation">Designation</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}"
+                placeholder="Designation" name="des">
+            <label for="floatingInput">Designation</label>
         </div>
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Fees"
+            <input type="number" class="form-control" id="floatingInput" value="{{this.fees}}" placeholder="Fees"
                 name="fees">
             <label for="floatingInput">Fees</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" value="{{this.degree}}"
+                placeholder="Degree" name="degree">
+            <label for="floatingInput">Degree</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" value="{{this.specialization}}" placeholder="Specialization"
+                name="specialization">
+            <label for="floatingInput">Specialization</label>
         </div>
     </div>
     <div class="col-12 d-grid">

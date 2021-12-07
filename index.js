@@ -56,8 +56,10 @@ async function main() {
                 last_name: req.body.lastname,
                 email: req.body.email,
                 phone: req.body.phone,
-                des: req.body.designation,
-                fees: req.body.fees
+                des: req.body.des,
+                fees: req.body.fees,
+                deg: req.body.degree,
+                spec: req.body.specialization
             })
             const registered = await registerDoc.save();
             res.status(201).render(home);

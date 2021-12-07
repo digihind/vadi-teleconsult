@@ -33,6 +33,14 @@ const docSchema = new mongoose.Schema({
         fees : {
             type:Number,
             required:true
+        },
+        deg : {
+            type:String,
+            required:true
+        },
+        spec : {
+            type:String,
+            required:true
         }
     })
     const Doctor = new mongoose.model("Doctor", docSchema);
