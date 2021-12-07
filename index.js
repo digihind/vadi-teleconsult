@@ -4,22 +4,13 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const router = express.Router();
 const mongoose = require('mongoose');
+const doctor = require('./models/doctor');
+const Doctor = require("./models/doctor");
 
+const app = express();
+const port = process.env.port || 5000;
 main().catch(err => console.log(err));
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/DocsApp');
-    const docSchema = new mongoose.Schema({
-        email: String,
-        name: String,
-        password: String
-    });
-    const Doctor = mongoose.model("Doctor", docSchema);
-    const Abhay = new Doctor({ email: "abhay@gmail.com", name: "Abhay", password: "abhay" });
-    await Abhay.save();
-
-    const app = express();
-    const port = process.env.port || 5000;
-
 
     app.use(express.static(__dirname + '/public'));
     app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +23,14 @@ async function main() {
         console.log('Hello');
         res.render('home');
     })
+
+    app.get('/docl', async (req, res) => {
+        const list = await Doctor.find({});
+        console.log(list);
+        res.send("Hi Sharda, Varun here!")
+        // res.render("doctor",{list});
+    })
+
     app.get('/pat', (req, res) => {
         console.log('Patient Screen Loading!');
         res.render('patient');
