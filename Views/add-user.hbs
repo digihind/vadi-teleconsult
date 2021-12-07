@@ -14,6 +14,7 @@
 src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
     <div class="container pt-5 pb-5">
+<<<<<<< HEAD
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -61,7 +62,69 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
             <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Phone"
                 name="phone">
             <label for="floatingInput">Phone</label>
+=======
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/pat">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">New User</li>
+            </ol>
+        </nav>
+
+        {{#if alert}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{alert}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+>>>>>>> 97c866dc086b6a1718d27210af3c0dafa1da95e9
         </div>
+        {{/if}}
+
+        <form class="row g-3 needs-validation" method="POST" action="/adduser">
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}"
+                        placeholder="First Name" name="firstname">
+                    <label for="floatingInput">First Name</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" value="{{this.last_name}}"
+                        placeholder="Last Name" name="lastname">
+                    <label for="floatingInput">Last Name</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" value="{{this.email}}"
+                        placeholder="email@email.com" name="email">
+                    <label for="floatingInput">Email</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}"
+                        placeholder="Phone" name="phone">
+                    <label for="floatingInput">Phone</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="designation"
+                        style="height: 200px">{{this.comments}}</textarea>
+                    <label for="designation">Designation</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInput" value="{{this.phone}}"
+                        placeholder="Fees" name="fees">
+                    <label for="floatingInput">Fees</label>
+                </div>
+            </div>
+            <div class="col-12 d-grid">
+                <button class="btn btn-primary" type="submit" value="adduser">Submit</button>
+            </div>
+        </form>
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
@@ -79,15 +142,15 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" value="{{this.degree}}"
-                placeholder="Degree" name="degree">
+            <input type="text" class="form-control" id="floatingInput" value="{{this.degree}}" placeholder="Degree"
+                name="degree">
             <label for="floatingInput">Degree</label>
         </div>
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" value="{{this.specialization}}" placeholder="Specialization"
-                name="specialization">
+            <input type="text" class="form-control" id="floatingInput" value="{{this.specialization}}"
+                placeholder="Specialization" name="specialization">
             <label for="floatingInput">Specialization</label>
         </div>
     </div>
@@ -95,6 +158,7 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
         <button class="btn btn-primary" type="submit" value="adduser" ng-disabled="myForm.user.$dirty && 
         myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">Submit</button>
     </div>
+<<<<<<< HEAD
 </form>
 <script>
     var app = angular.model('myApp', []);
@@ -109,6 +173,11 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
 </script>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+=======
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+>>>>>>> 97c866dc086b6a1718d27210af3c0dafa1da95e9
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
