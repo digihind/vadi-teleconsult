@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <title>Hospital Management System</title>
 </head>
-<script
-src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 <body>
     <div class="container pt-5 pb-5">
-    <nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">New User</li>
@@ -28,14 +27,12 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
 </div>
 {{/if}}
 
-<form ng-app="myApp" ng-controller="validateCtrl" class="row g-3 needs-validation" method="POST" action="/adduser" name="myForm" novalidate>
+<form class="row g-3 needs-validation" method="POST" action="/addpat" >
     <div class="col-6">
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}"
-                placeholder="First Name" name="firstname" ng-model="user" required>
+                placeholder="First Name" name="firstname">
             <label for="floatingInput">First Name</label>
-            <span style="color:red" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
-                <span ng-show="myForm.firstname.$error.required">**Name is required</span></span>
         </div>
     </div>
     <div class="col-6">
@@ -48,12 +45,8 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
     <div class="col-6">
         <div class="form-floating mb-3">
             <input type="email" class="form-control" id="floatingInput" value="{{this.email}}"
-                placeholder="email@email.com" name="email" ng-model="email" required>
+                placeholder="email@email.com" name="email">
             <label for="floatingInput">Email</label>
-            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-                <span ng-show="myForm.email.$error.required">**Email is required.</span>
-                <span ng-show="myForm.email.$error.email">**Invalid email address.</span>
-            </span>
         </div>
     </div>
     <div class="col-6">
@@ -65,48 +58,29 @@ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></scr
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}"
-                placeholder="Designation" name="des">
-            <label for="floatingInput">Designation</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.gender}}"
+                placeholder="Gender" name="gender">
+            <label for="floatingInput">Gender</label>
         </div>
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" value="{{this.fees}}" placeholder="Fees"
-                name="fees">
-            <label for="floatingInput">Fees</label>
+            <input type="number" class="form-control" id="floatingInput" value="{{this.fees}}" placeholder="Age"
+                name="age">
+            <label for="floatingInput">Age</label>
         </div>
     </div>
     <div class="col-6">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" value="{{this.degree}}"
-                placeholder="Degree" name="degree">
-            <label for="floatingInput">Degree</label>
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" value="{{this.specialization}}" placeholder="Specialization"
-                name="specialization">
-            <label for="floatingInput">Specialization</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.address}}"
+                placeholder="Address" name="address">
+            <label for="floatingInput">Address</label>
         </div>
     </div>
     <div class="col-12 d-grid">
-        <button class="btn btn-primary" type="submit" value="adduser" ng-disabled="myForm.user.$dirty && 
-        myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">Submit</button>
+        <button class="btn btn-primary" type="submit" value="adduser">Submit</button>
     </div>
 </form>
-<script>
-    var app = angular.model('myApp', []);
-    app.controller('validateCtrl', function($scope){
-        $scope.user = ' ';
-        $scope.email = 'xxxx@gmail.com';
-        $scope.number='1234567890';
-        $scope.url='http://wxyz.com';
-        $scope.card='1234567893232';
-        $scope.date='21-12-1999';
-    });
-</script>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

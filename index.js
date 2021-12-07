@@ -9,6 +9,8 @@ const hbs = require("hbs");
 // const mongoose = require('mongoose');
 // const doctor = require('./models/doctor');
 const Doctor = require("./models/doctor");
+const Patient = require("./models/patient");
+const Book = require("./models/appointment");
 const{ json } = require("express");
 
 const port = process.env.port || 5000;
@@ -68,6 +70,30 @@ async function main() {
             res.status(400).send(error);
         }
     })
+    app.get("/addpat", (req, res) => {
+        console.log('Hello');
+        res.render('add-pat');
+    })
+    app.post("/addpat", async (req, res) => {
+        try{
+            console.log(req.body.email);
+            res.send(req.body);
+            const registerPat = new Patient({
+                first_name: req.body.firstname,
+                last_name: req.body.lastname,
+                email: req.body.email,
+                phone: req.body.phone,
+                gender: req.body.gender,
+                age: req.body.age,
+                address: req.body.address
+            })
+            const registered = await registerPat.save();
+            res.status(201).render(home);
+        }
+        catch(error){
+            res.status(400).send(error);
+        }
+    })
     app.get('/pat', (req, res) => {
         console.log('Patient Screen Loading!');
         res.render('patient');
@@ -81,6 +107,25 @@ async function main() {
     app.get('/book', (req, res) => {
         console.log('Doctor Screen Loading!');
         res.render('booking');
+    })
+    app.post("/book", async (req, res) => {
+        try{
+            console.log(req.body.email);
+            res.send(req.body);
+            const book = new Book({
+                name: req.body.name,
+                age: req.body.age,
+                email: req.body.email,
+                date: req.body.date,
+                time: req.body.time,
+                doc_name:"Shraddha suman"
+            })
+            const registered = await book.save();
+            res.status(201).render(home);
+        }
+        catch(error){
+            res.status(400).send(error);
+        }
     })
 
     app.get('/chatscreen_doc', (req, res) => {

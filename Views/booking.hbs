@@ -13,13 +13,13 @@
             <img src="/pics/book-img.svg">
         </div>
         <div class="frm">
-            <form action="">
+            <form method="POST" action="/book">
                 <h3>BOOK APPOINTMENT</h3>
-                <input type="text" placeholder="Your Name" class="box">
-                <input type="number" placeholder="Your Age" class="box">
-                <input type="email" placeholder="Your Email-Id" class="box">
-                <input type="date" class="box">
-                <input type="time" placeholder="Your Preferred Time-Slot" class="box">
+                <input type="text" placeholder="Your Name" class="box" name="name">
+                <input type="number" placeholder="Your Age" class="box"name="age">
+                <input type="email" placeholder="Your Email-Id" class="box" name="email">
+                <input type="date" class="box" name="date">
+                <input type="time" placeholder="Your Preferred Time-Slot" class="box" name="time">
                 <input type="submit" value="Book Now" class="btn">
             </form>
         </div>
