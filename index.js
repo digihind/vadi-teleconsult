@@ -6,6 +6,8 @@ const app = express();
 const hbs = require("hbs");
 
 const Doctor = require("./models/doctor");
+const Patient = require("./models/patient");
+const Book = require("./models/appointment");
 const { json } = require("express");
 
 const port = process.env.port || 5000;
@@ -30,9 +32,6 @@ async function main() {
 
     const routes = require('./server/routes/app');
     app.use('/', routes);
-
-
-
 
     app.listen(port, () => {
         console.log(`Listening from port ${port}`);
