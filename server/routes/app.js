@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/appController')
+const appController = require('../controllers/appController')
 
 router.get('/', appController.home);
 router.get('/pat', appController.patient);
@@ -68,7 +68,7 @@ router.get('/chatscreen_doc', appController.chatpat);
 //     res.render('chatscreen_doc');
 // })
 
-app.get('/chatscreen_pat', (req, res) => {
-    console.log('Patient Chat Screen Loading!');
-    res.render('chatscreen_pat');
-})
+// app.get('/chatscreen_pat', (req, res) => {
+//     console.log('Patient Chat Screen Loading!');
+//     res.render('chatscreen_pat');
+// })

@@ -1,4 +1,4 @@
-const Doctor = require("./models/doctor");
+// const Doctor = require("./models/doctor");
 
 exports.home = (req, res) => {
     console.log('Hello');
